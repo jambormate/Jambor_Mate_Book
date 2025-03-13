@@ -36,6 +36,37 @@ namespace ConsoleApp4
             }
             return null;
         }
+        public void EditBookData()
+        {
+            Console.Write("Új cím: ");
+            string inputTitle = Console.ReadLine();
+            if (!string.IsNullOrEmpty(inputTitle))
+            {
+                this.title = inputTitle;
+            }
+
+            Console.Write("Új szerző: ");
+            string inputAuthor = Console.ReadLine();
+            if (!string.IsNullOrEmpty(inputAuthor))
+            {
+                this.author = inputAuthor;
+            }
+
+            Console.Write("Új lapszám: ");
+            string inputPageCount = Console.ReadLine();
+            if (!string.IsNullOrEmpty(inputPageCount))
+            {
+                this.pageCount = Convert.ToInt32(inputPageCount);
+            }
+
+            Console.Write("Új kiadási év: ");
+            string inputReleaseYear = Console.ReadLine();
+            if (!string.IsNullOrEmpty(inputReleaseYear))
+            {
+                this.releaseYear = Convert.ToInt32(inputReleaseYear);
+            }
+        }
+
 
     }
 }
