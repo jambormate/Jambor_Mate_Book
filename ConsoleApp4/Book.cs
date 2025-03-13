@@ -21,10 +21,21 @@ namespace ConsoleApp4
 			this.releaseYear = releaseYear;
 		}
 
-		public string Title { get => title; set => title = value; }
-		public string Author { get => author; set => author = value; }
-		public int PageCount { get => pageCount; set => pageCount = value; }
-		public int ReleaseYear { get => releaseYear; set => releaseYear = value; }
+		public string Title { get => title; }
+		public string Author { get => author;  }
+		public int PageCount { get => pageCount;}
+		public int ReleaseYear { get => releaseYear; }
+        public static Book GetBookByTitle(Book[] books, string title)
+        {
+            foreach (Book book in books)
+            {
+                if (book.Title == title)
+                {
+                    return book;
+                }
+            }
+            return null;
+        }
 
-	}
+    }
 }
